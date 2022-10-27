@@ -1,12 +1,12 @@
 """
-This is for scenario A1 analysis, discussing the impact of irrigation and drainage styles.
+This is to analyze the impact of irrigation and drainage styles for Hubei province, a typical Changjiang one-season rice-production province in China.
 Written by Sisi Li,
 on May 17, 2021
 """
 
 import pandas as pd
 import numpy as np
-import main_run_simple1
+import main_run
 import os
 
 folder = "wf_new/Hubei/"
@@ -61,5 +61,5 @@ for i in range(0, 100, 1):
         parameters1.at["vf_P"] = str(vf_P_pd[i] * 0.7)
         parameters_file = "{}{}/data_config{}.json".format(folder, style, str(i))
         parameters1.to_json(parameters_file, orient='index', index=True, indent=4)
-        main_run_simple1.main(parameters_file, str(i))
+        main_run.main(parameters_file, str(i))
 
