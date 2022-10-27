@@ -6,7 +6,7 @@ The files main_run.py, modules.py and sd_functions.py are the core scripts for W
 
 The CJ1S-Hubei.py is an example script to run the model, with data_config.json as an example model parameter input file.
 
-The two scripts in folder "WF and ISS analysis" are example post-analysis scripts that can calculate the water footprint (WF) and irrigation self-sufficiency (ISS) of the rice-production systems with the modeling results.
+The two scripts in folder "WF and ISS analysis" are example post-analysis scripts that can calculate the water footprint (WF) and irrigation self-sufficiency (ISS) of rice-production systems with the modeling results.
 
 ## WQQM-PIDU model reference:
 Li S., Liu H., Zhang L., Li X., Wang H., Zhuang Y., Zhang F., Zhai L., Fan X., Hu W., Pan J., Potential nutrient removal function of naturally existed ditches and ponds in paddy regions: Prospect of enhancing water quality by irrigation and drainage management. Sci. Total Enviro. 718, 137418 (2020)
