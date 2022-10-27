@@ -309,7 +309,7 @@ def main(parameter_file, run_id):
     import pandas as pd
     import numpy as np
     import sd_functions
-    import modules_simple2
+    import modules
 
     # Read in water management data
     wtr_mng_d = pd.read_csv(wtr_mng_File, sep='\t', header=0, index_col=0, parse_dates=True)
@@ -514,27 +514,27 @@ def main(parameter_file, run_id):
 
     """Start the main program, as the set mode"""
     if (pre_risk == 0) & (recycle_irrg == 0):
-        output_normal = modules_simple2.normal(prcp_d, startDay, endDay, wtr_mng_d, pet_d, ditch_par, pond_par, F_doy_array,
+        output_normal = modules.normal(prcp_d, startDay, endDay, wtr_mng_d, pet_d, ditch_par, pond_par, F_doy_array,
                                        fert_type_array,
                                        TN0_array, TP0_array, TN_I, TP_I, area_f, Ks, Fc0_f, Fc0_pd, TN_P0, TN_P1, TP_P,
                                        TN_rate_lch, TN_rate_lch_lat, TP_rate_lch, TP_rate_lch_lat, ENC0_dp, EPC0_dp,
                                        ENCR_f, EPCR_f,
                                        vf_N_array, vf_P, H_V_sr, vf_N_pd, vf_P_pd, run_id, output_dir, graph)
     elif (pre_risk == 1) & (recycle_irrg == 0):
-        output_bmp = modules_simple2.pre_risk(prcp_d, startDay, endDay, wtr_mng_d, pet_d, ditch_par, pond_par, F_doy_array,
+        output_bmp = modules.pre_risk(prcp_d, startDay, endDay, wtr_mng_d, pet_d, ditch_par, pond_par, F_doy_array,
                                       fert_type_array, TN0_array, TP0_array, TN_I, TP_I, area_f, Ks, Fc0_f, Fc0_pd,
                                       TN_P0, TN_P1, TP_P, TN_rate_lch, TN_rate_lch_lat, TP_rate_lch, TP_rate_lch_lat,
                                       ENC0_dp, EPC0_dp, ENCR_f, EPCR_f, vf_N_array, vf_P, H_V_sr, vf_N_pd, vf_P_pd,
                                       risk_days, min_level_prerisk, Hf_Hdp_sr, run_id, output_dir, graph)
     elif (pre_risk == 0) & (recycle_irrg == 1):
-        output_bmp = modules_simple2.recycle_irrg(prcp_d, startDay, endDay, wtr_mng_d, pet_d, ditch_par, pond_par, F_doy_array,
+        output_bmp = modules.recycle_irrg(prcp_d, startDay, endDay, wtr_mng_d, pet_d, ditch_par, pond_par, F_doy_array,
                                           fert_type_array, TN0_array, TP0_array, TN_I, TP_I, area_f, Ks, Fc0_f, Fc0_pd,
                                           TN_P0, TN_P1, TP_P, TN_rate_lch, TN_rate_lch_lat, TP_rate_lch,
                                           TP_rate_lch_lat,
                                           ENC0_dp, EPC0_dp, ENCR_f, EPCR_f, vf_N_array, vf_P, H_V_sr, vf_N_pd, vf_P_pd,
                                           min_level_recycle, run_id, output_dir, graph)
     else:
-        output_bmp = modules_simple2.both_bmps(prcp_d, startDay, endDay, wtr_mng_d, pet_d, ditch_par, pond_par, F_doy_array,
+        output_bmp = modules.both_bmps(prcp_d, startDay, endDay, wtr_mng_d, pet_d, ditch_par, pond_par, F_doy_array,
                                        fert_type_array, TN0_array, TP0_array, TN_I, TP_I, area_f, Ks, Fc0_f, Fc0_pd,
                                        TN_P0,
                                        TN_P1, TP_P, TN_rate_lch, TN_rate_lch_lat, TP_rate_lch, TP_rate_lch_lat, ENC0_dp,
@@ -543,7 +543,7 @@ def main(parameter_file, run_id):
 
     if ((pre_risk == 1) | (recycle_irrg == 1)):
         if bmp_compare == 1:
-            normal_comp = modules_simple2.normal(prcp_d, startDay, endDay, wtr_mng_d, pet_d, ditch_par, pond_par, F_doy_array,
+            normal_comp = modules.normal(prcp_d, startDay, endDay, wtr_mng_d, pet_d, ditch_par, pond_par, F_doy_array,
                                          fert_type_array,
                                          TN0_array, TP0_array, TN_I, TP_I, area_f, Ks, Fc0_f, Fc0_pd, TN_P0, TN_P1,
                                          TP_P,
