@@ -107,13 +107,14 @@ def f_vhp(h, hDiff_FP, area_p, slp_p):
     return v
 
 
-def f_vhpd(h, v, h_v_sr, area_pd, hDiff_FD1):
+
+def f_vhpd(h, v, h_v_sr, area_pd, h_yan):
     """The volume-depth conversion function for the ditch-pond system
        h is the water depth as in the first-order ditch, in mm.
        v is the increased water volume, in mm m2/d.
        h_v_sr is a pandas Series to store the paired depth-volume (H-V) relationship for the paddy IDU.
        area_pd is the total area of the paddy IDU, in m2.
-       hDiff_FD1 is the effective depth of the 1st order ditch, in mm.
+       h_yan is the depth as in the 1st order ditch above which drainage out the system is naturally occur, in mm
        The output is a tuple (q_dp, hdp),
        where q_dp is the water flow out of the system, in m3/d,
        and hdp is the water depth in ditch-pond system as the value of depth in the first-order ditch, in mm"""
@@ -134,10 +135,10 @@ def f_vhpd(h, v, h_v_sr, area_pd, hDiff_FD1):
         result_hdp = float(i)
         del i
     else:
-        max_volume = h_v_sr.max() - current_volume
+        max_volume = h_v_sr[h_yan] - current_volume
         if v > max_volume:
             result_q_dp = (v - max_volume) / 1000.0  # in m3/d
-            result_hdp = hDiff_FD1  # in mm
+            result_hdp = h_yan  # in mm
         else:
             result_q_dp = 0  # in m3/d
             if (v + current_volume) < 0:
