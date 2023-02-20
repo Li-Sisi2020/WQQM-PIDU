@@ -6,7 +6,7 @@ on May 17, 2021
 
 import pandas as pd
 import numpy as np
-import main_run
+import main_runV2
 import os
 
 folder = "wf_new/Hubei/"
@@ -61,5 +61,5 @@ for i in range(0, 100, 1):
         parameters1.at["vf_P"] = str(vf_P_pd[i] * 0.7)
         parameters_file = "{}{}/data_config{}.json".format(folder, style, str(i))
         parameters1.to_json(parameters_file, orient='index', index=True, indent=4)
-        main_run.main(parameters_file, str(i))
+        main_runV2.main(parameters_file, str(i))
 
