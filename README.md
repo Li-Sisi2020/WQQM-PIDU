@@ -1,8 +1,8 @@
-# WQQM-PIDU-V2.0
+# WQQM-PIDU
 
 WQQM-PIDU model is a water quantity and quality model for paddy irrigation and drainage units, which can simulate water consumption by rice production and wastewater release for a irrigation drainage unit composed of paddy fields, ditches (and a pond if existed). Detail information of the model theory and application examples are referred to a published journal paper Li et al. (2020). For version 2.0, the freshwater irrigation from remote reservoirs outside of irrigation drainage units is restricted in dry conditions beyond the supply capability of the irrigation district. Detailed information is referred to a manuscript Li et al. (2023) submitted to Nature Communications.
 
-The files main_runV2.py, modulesV2.py and sd_functions.py are the core scripts for WQQM-PIDU (V2.0).
+The files main_runV2.py, modulesV2.py and sd_functions.py are the core scripts for WQQM-PIDU (v2.0).
 
 The CJ1S-Hubei.py is an example script to run the model, with data_config.json as an example model parameter input file.
 
