@@ -11,4 +11,5 @@ The two scripts in folder "WF and ISS analysis" are example post-analysis script
 ## WQQM-PIDU model references:
 Li S., Liu H., Zhang L., Li X., Wang H., Zhuang Y., Zhang F., Zhai L., Fan X., Hu W., Pan J., Potential nutrient removal function of naturally existed ditches and ponds in paddy regions: Prospect of enhancing water quality by irrigation and drainage management. Sci. Total Enviro. 718, 137418 (2020)
 https://www.sciencedirect.com/science/article/abs/pii/S0048969720309281
+
 Li S., Zhuang Y., Liu H., Wang Z., Zhang F., Lv M., Zhai L., Fan X., Niu S., Chen J., Xu C., Wang N., Ruan S., Shen W., Mi M., Wu S., Du Y., Zhang L., Enhancing rice production sustainability and resilience via reactivating small water bodies for irrigation and drainage. submitted to Nat. Commun. (2023)
