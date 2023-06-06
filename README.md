@@ -14,7 +14,7 @@ https://www.sciencedirect.com/science/article/abs/pii/S0048969720309281
 
 Li S., Zhuang Y., Liu H., Wang Z., Zhang F., Lv M., Zhai L., Fan X., Niu S., Chen J., Xu C., Wang N., Ruan S., Shen W., Mi M., Wu S., Du Y., Zhang L., Enhancing rice production sustainability and resilience via reactivating small water bodies for irrigation and drainage. submitted to Nat. Commun. (2023)
 
-## LICENCE
+## License
 Copyright (C) 2023 Sisi Li
 
 This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details
